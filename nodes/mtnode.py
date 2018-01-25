@@ -704,7 +704,7 @@ class XSensDriver(object):
         if self.pub_imu:
             self.imu_msg.header = self.h
             if self.imu_pub is None:
-                self.imu_pub = rospy.Publisher('imu/data', Imu, queue_size=10)
+                self.imu_pub = rospy.Publisher('imu', Imu, queue_size=10)
             self.imu_pub.publish(self.imu_msg)
         if self.pub_gps:
             self.gps_msg.header = self.h
